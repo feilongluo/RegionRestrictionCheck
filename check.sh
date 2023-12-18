@@ -3674,7 +3674,7 @@ function CheckV4() {
                 check4=$(ping 1.1.1.1 -c 1 2>&1)
             fi
             echo "--------------------------------"
-            echo -e " ${Font_SkyBlue}** Your Network Provider: ${local_isp4} (${local_ipv4_asterisk})${Font_Suffix} "
+            echo -e " ${Font_SkyBlue}** Your Network Provider: ${local_isp4} (${local_ipv4})${Font_Suffix} "
             if [[ "$check4" != *"unreachable"* ]] && [[ "$check4" != *"Unreachable"* ]]; then
                 isv4=1
             else
@@ -3701,7 +3701,7 @@ function CheckV4() {
                 check4=$(ping 1.1.1.1 -c 1 2>&1)
             fi
             echo "--------------------------------"
-            echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp4} (${local_ipv4_asterisk})${Font_Suffix} "
+            echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp4} (${local_ipv4})${Font_Suffix} "
             if [[ "$check4" != *"unreachable"* ]] && [[ "$check4" != *"Unreachable"* ]]; then
                 isv4=1
             else
@@ -3752,7 +3752,7 @@ function CheckV6() {
                 echo ""
                 echo -e " ${Font_SkyBlue}** 正在测试IPv6解锁情况${Font_Suffix} "
                 echo "--------------------------------"
-                echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp6} (${local_ipv6_asterisk})${Font_Suffix} "
+                echo -e " ${Font_SkyBlue}** 您的网络为: ${local_isp6} (${local_ipv6})${Font_Suffix} "
                 isv6=1
             else
                 echo -e "${Font_SkyBlue}当前主机不支持IPv6,跳过...${Font_Suffix}"
@@ -3838,7 +3838,6 @@ function Start() {
         echo -e "${Font_SkyBlue}输入数字  [9]: [跨国平台+东南亚平台]检测${Font_Suffix}"
         echo -e "${Font_SkyBlue}输入数字  [0]: [   只进行跨国平台  ]检测${Font_Suffix}"
         echo -e "${Font_SkyBlue}输入数字 [99]: [   体育直播平台    ]检测${Font_Suffix}"
-        echo -e "${Font_Purple}输入数字 [69]: [   广告推广投放    ]咨询${Font_Suffix}"
         read -p "请输入正确数字或直接按回车:" num
     fi
 }
@@ -4007,9 +4006,6 @@ function RunScript() {
             fi
             Goodbye
 
-        elif [[ "$num" -eq 69 ]]; then
-            clear
-            ScriptTitle
         else
             echo -e "${Font_Red}请重新执行脚本并输入正确号码${Font_Suffix}"
             echo -e "${Font_Red}Please Re-run the Script with Correct Number Input${Font_Suffix}"
