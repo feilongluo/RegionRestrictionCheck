@@ -32,7 +32,7 @@ while getopts ":I:M:EX:P:" optname; do
         ;;
     "P")
         proxy="$OPTARG"
-        usePROXY="-x $proxy"
+        usePROXY="-m 2 -x $proxy"
     	;;
     ":")
         echo "Unknown error while processing options"
